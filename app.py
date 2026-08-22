@@ -1,10 +1,11 @@
-from tensorflow.keras.models import load_model
-from flask import Flask, render_template, request, session, redirect, url_for, flash
-import numpy as np
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications.xception import preprocess_input
-from pymongo import MongoClient
 import os
+
+import numpy as np
+from flask import Flask, flash, redirect, render_template, request, session, url_for
+from pymongo import MongoClient
+from tensorflow.keras.applications.xception import preprocess_input
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing import image
 
 # -------------------- MongoDB Connection --------------------
 client = MongoClient("mongodb://localhost:27017/")
